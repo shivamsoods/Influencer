@@ -6,4 +6,7 @@
     <color name="colorAccentMid">#F6B1A1</color>
     <color name="colorAccentDark">#DD8D9A</color>
 
+
+    <color name="colorProfileText">#237bbe</color>
+
 </resources>

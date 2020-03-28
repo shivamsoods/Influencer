@@ -1,6 +1,7 @@
 package com.shivam.influencerapp
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
@@ -28,8 +29,7 @@ class LoginActivity : AppCompatActivity() {
 
         val textViewAnim =
             AnimationUtils.loadAnimation(applicationContext, R.anim.edit_text_anim)
-        val centerRevealAnim =
-            AnimationUtils.loadAnimation(applicationContext, R.anim.center_reveal_anim)
+
 
 
         btnLoginEmail.setOnClickListener {
@@ -77,10 +77,14 @@ class LoginActivity : AppCompatActivity() {
 
         btnLoginEmail2.setOnClickListener {
             Toast.makeText(applicationContext, "Email used", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ProfileActivity::class.java))
+            finish()
         }
 
         btnLoginMobile2.setOnClickListener {
             Toast.makeText(applicationContext, "Mobile used", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ProfileActivity::class.java))
+            finish()
         }
 
 
