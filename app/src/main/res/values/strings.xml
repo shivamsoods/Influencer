@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Influencer App</string>
+    <string name="text_terms">By logging IN you agree \n to all the terms and conditions.</string>
 </resources>

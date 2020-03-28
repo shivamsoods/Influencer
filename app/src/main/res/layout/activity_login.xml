@@ -8,33 +8,226 @@
     tools:context=".LoginActivity">
 
     <ImageView
+
         android:id="@+id/ivLoginTopShape"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="400dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginStart="-100dp"
-        android:layout_marginEnd="-100dp"
-        android:src="@drawable/gradient_login"
+        android:layout_marginStart="-200dp"
+        android:layout_marginEnd="-200dp"
+        android:src="@drawable/gradient_login_top_shape"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvLoginAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="INFLUENCER"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoginEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grpLoginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btnLoginEmail,btnLoginMobile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <Button
         android:id="@+id/btnLoginEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/gradient_login_button"
+        android:drawableStart="@android:drawable/ic_dialog_email"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
         android:text="Log in with Email"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="374dp" />
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLoginTopShape"
+        app:layout_constraintVertical_bias="0.25" />
 
     <Button
         android:id="@+id/btnLoginMobile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/gradient_login_button"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
         android:text="Log in with phone"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="471dp" />
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnLoginEmail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btnLoginEmail"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginEmail"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvLoginTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="@string/text_terms"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLoginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/tvLoginEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLoginEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvLoginPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Password"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLoginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/btnLoginEmail2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_login_button"
+                android:ems="15"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLoginSwitchToMobile"
+                android:textAlignment="center"
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login with Mobile Instead" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLoginMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/tvLoginMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLoginMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="phone"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnLoginMobile2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_login_button"
+                android:ems="15"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLoginSwitchToEmail"
+                android:textAlignment="center"
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login with Email Instead" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
