@@ -12,8 +12,10 @@ class ProfileAdapter(private val exampleList: List<ExampleList>) :
     RecyclerView.Adapter<ProfileAdapter.ExampleViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExampleViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.video_item,
-            parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(
+            R.layout.video_item,
+            parent, false
+        )
 
         return ExampleViewHolder(itemView)
     }
@@ -24,6 +26,8 @@ class ProfileAdapter(private val exampleList: List<ExampleList>) :
         holder.imageView.setImageResource(currentItem.imgRes)
         holder.textView1.text = currentItem.title
         holder.textView2.text = currentItem.description
+
+
     }
 
     override fun getItemCount() = exampleList.size
@@ -32,5 +36,8 @@ class ProfileAdapter(private val exampleList: List<ExampleList>) :
         val imageView: ImageView = itemView.ivVideoItem
         val textView1: TextView = itemView.tvVideoTitle
         val textView2: TextView = itemView.tvVideoDescription
+
+
     }
 }
+

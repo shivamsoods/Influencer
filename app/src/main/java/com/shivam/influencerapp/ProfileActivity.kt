@@ -34,8 +34,10 @@ class ProfileActivity : AppCompatActivity() {
         rvProfileVideos.adapter = ProfileAdapter(list)
         rvProfileVideos.setHasFixedSize(true)
 
-        fabProfileAddVideo.setOnClickListener{
-            startActivity(Intent(this,SubmitVideoActivity::class.java))
+
+
+        fabProfileAddVideo.setOnClickListener {
+            startActivity(Intent(this, SubmitVideoActivity::class.java))
         }
 
         val spinnerList: ArrayList<String> = ArrayList()
@@ -101,4 +103,6 @@ class ProfileActivity : AppCompatActivity() {
         list.add(ExampleList(R.drawable.video, "Cool Video 6", "Some awesome long 6 description"))
 
     }
+
+
 }
