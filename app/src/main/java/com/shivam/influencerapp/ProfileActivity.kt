@@ -31,7 +31,7 @@ class ProfileActivity : AppCompatActivity() {
 
         makeDummyDataList()
 
-        rvProfileVideos.adapter = ProfileAdapter(list)
+        rvProfileVideos.adapter = ProfileAdapter(this,list)
         rvProfileVideos.setHasFixedSize(true)
 
 
