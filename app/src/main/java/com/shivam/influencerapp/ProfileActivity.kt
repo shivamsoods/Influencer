@@ -31,7 +31,7 @@ class ProfileActivity : AppCompatActivity() {
 
         makeDummyDataList()
 
-        rvProfileVideos.adapter = ProfileAdapter(this,list)
+        rvProfileVideos.adapter = ProfileAdapter(this, list)
         rvProfileVideos.setHasFixedSize(true)
 
 
@@ -63,7 +63,7 @@ class ProfileActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(
                         applicationContext,
-                        "Selected item is " + parent.getItemAtPosition(position).toString(),
+                        "Sorted way is " + parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -77,30 +77,54 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun makeDummyDataList() {
 
-        list.add(ExampleList(R.drawable.video, "Cool Video 1", "Some awesome long 1 description"))
+        list.add(
+            ExampleList(
+                R.drawable.video,
+                "Cool Video 1",
+                "Some awesome long 1 description",
+                "17 March 2020",
+                true,50
+            )
+        )
         list.add(
             ExampleList(
                 R.drawable.ic_launcher_background,
                 "Cool Video 2",
-                "Some awesome long 2 description"
+                "Some awesome long 2 description", "20 March 2020", false
             )
         )
-        list.add(ExampleList(R.drawable.video, "Cool Video 3", "Some awesome long 3 description"))
+        list.add(
+            ExampleList(
+                R.drawable.video,
+                "Cool Video 3",
+                "Some awesome long 3 description",
+                "1 March 2020",
+                true,50
+            )
+        )
         list.add(
             ExampleList(
                 R.drawable.gradient_profile_earning,
                 "Cool Video 4",
-                "Some awesome long 4 description"
+                "Some awesome long 4 description", "17 February 2020", true,100
             )
         )
         list.add(
             ExampleList(
                 R.drawable.ic_location,
                 "Cool Video 5",
-                "Some awesome long 5 description"
+                "Some awesome long 5 description", "15 March 2020", false
             )
         )
-        list.add(ExampleList(R.drawable.video, "Cool Video 6", "Some awesome long 6 description"))
+        list.add(
+            ExampleList(
+                R.drawable.video,
+                "Cool Video 6",
+                "Some awesome long 6 description",
+                "17 March 2020",
+                true,50
+            )
+        )
 
     }
 

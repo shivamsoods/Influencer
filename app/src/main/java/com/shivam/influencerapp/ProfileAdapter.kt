@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.video_item.view.*
 
@@ -46,8 +45,14 @@ class ProfileAdapter(val context: Context, private val exampleList: List<Example
         init {
             itemView.setOnClickListener {
 
-                val intent=Intent(context,VideoDetailActivity::class.java)
-                intent.putExtra("vTitle",cItem.title)
+                val intent = Intent(context, VideoDetailActivity::class.java)
+                intent.putExtra("vImgRes", cItem.imgRes)
+                intent.putExtra("vTitle", cItem.title)
+                intent.putExtra("vDescription", cItem.description)
+                intent.putExtra("vSubDate", cItem.subDate)
+                intent.putExtra("vIsAccepted", cItem.isAccepted)
+                intent.putExtra("vEarning", cItem.earnings)
+                
                 context.startActivity(intent)
             }
         }
