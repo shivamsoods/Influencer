@@ -1,5 +1,6 @@
 package com.shivam.influencerapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
@@ -33,6 +34,9 @@ class ProfileActivity : AppCompatActivity() {
         rvProfileVideos.adapter = ProfileAdapter(list)
         rvProfileVideos.setHasFixedSize(true)
 
+        fabProfileAddVideo.setOnClickListener{
+            startActivity(Intent(this,SubmitVideoActivity::class.java))
+        }
 
         val spinnerList: ArrayList<String> = ArrayList()
         spinnerList.add("Sort by")
